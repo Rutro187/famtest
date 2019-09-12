@@ -1,4 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$lc-primary: (
+    50 : #e0eff1,
+    100 : #b3d6db,
+    200 : #80bbc4,
+    300 : #4da0ac,
+    400 : #268b9a,
+    500 : #007788,
+    600 : #006f80,
+    700 : #006475,
+    800 : #005a6b,
+    900 : #004758,
+    A100 : #8ae3ff,
+    A200 : #57d7ff,
+    A400 : #24cbff,
+    A700 : #0ac5ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+$lc-app-primary: mat-palette($lc-primary);
+
+$lc-secondary: (
+    50 : #feefe4,
+    100 : #fcd6bc,
+    200 : #fabb90,
+    300 : #f7a064,
+    400 : #f68b42,
+    500 : #f47721,
+    600 : #f36f1d,
+    700 : #f16418,
+    800 : #ef5a14,
+    900 : #ec470b,
+    A100 : #ffffff,
+    A200 : #ffe9e3,
+    A400 : #ffc2b0,
+    A700 : #ffae96,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$lc-app-accent: mat-palette($lc-secondary);
 
 
+$LC-app-theme: mat-light-theme($lc-app-primary,$lc-app-accent);
 
+@include angular-material-theme($LC-app-theme);
