@@ -1,18 +1,23 @@
 <mat-toolbar color="primary" class="sticky">
-  <p class="title nav">muSpace</p>
+  <img class ="logo" alt="Learning Community" src="https://learningcommunityds.org/wp-content/uploads/2018/06/learningLogo.png">
+  <p class="title nav">Client Database</p>
   <div class="nav">
     <a routerLink="" class="link">Login</a>
   </div>
   <div class="nav">
-    <a routerLink="/signup" class="link">Sign Up</a>
+    <a routerLink="/family" class="link">Family</a>
   </div>
   <div class="nav">
-    <a routerLink="/playlists" class="link">Playlists</a>
+    <a routerLink="/staff" class="link">Staff</a>
   </div>
-
-    <div class="searchInput" routerLink="/search">
-      <input id="searchBar" type="text" placeholder="Search" >
-      <a class= "advanceSearchLink" (click)="isOpen = !isOpen" >Advanced Search</a>
+  <div class="nav">
+    <a routerLink="/classes" class="link">Classes</a>
+  </div>
+  <div class="nav">
+    <a routerLink="/reports" class="link">Reports</a>
+  </div>
+  <div class="nav">
+    <a routerLink="/playlists" class="link"></a>
   </div>
 </mat-toolbar>
 
