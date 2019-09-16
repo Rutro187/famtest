@@ -4,7 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FamilyComponent } from './family/family.component';
+import { StaffComponent } from './staff/staff.component';
+import { LoginComponent } from './login/login.component';
+/* Firebase services */
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment.prod';
 
+/* Auth service */
+import { AuthenticationService } from './authentication.service';
 // Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material';
@@ -37,8 +46,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { FamilyComponent } from './family/family.component';
-import { StaffComponent } from './staff/staff.component';
+import { UsermanComponent } from './userman/userman.component';
+
 
 
 
@@ -46,11 +55,15 @@ import { StaffComponent } from './staff/staff.component';
   declarations: [
     AppComponent,
     FamilyComponent,
-    StaffComponent
+    StaffComponent,
+    LoginComponent,
+    UsermanComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatCheckboxModule,
@@ -86,7 +99,7 @@ import { StaffComponent } from './staff/staff.component';
     ReactiveFormsModule ,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
