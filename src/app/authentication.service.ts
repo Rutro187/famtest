@@ -12,7 +12,7 @@ export class AuthenticationService {
     this.userData = angularFireAuth.authState;
    }
 /* Sign up */
-SignUp(email: string, password: string) {
+signUp(email: string, password: string) {
   this.angularFireAuth
     .auth
     .createUserWithEmailAndPassword(email, password)
@@ -25,7 +25,7 @@ SignUp(email: string, password: string) {
 }
 
 /* Sign in */
-SignIn(email: string, password: string) {
+login(email: string, password: string) {
   this.angularFireAuth
     .auth
     .signInWithEmailAndPassword(email, password)
@@ -38,7 +38,7 @@ SignIn(email: string, password: string) {
 }
 
 /* Sign out */
-SignOut() {
+signOut() {
   this.angularFireAuth
     .auth
     .signOut();

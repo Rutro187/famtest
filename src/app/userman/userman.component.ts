@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UsermanComponent implements OnInit {
   signupForm: FormGroup;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
@@ -25,13 +26,10 @@ export class UsermanComponent implements OnInit {
       console.log("Fix your Errors");
       return;
     }
-    this.authenticationService.SignUp(this.email.value, this.password.value);
+    this.authenticationService.signUp(this.email.value, this.password.value);
     
     
-    // this.authenticationService.SignUp(this.email, this.password);
-    // this.email = '';
-    // this.password = '';
-  }
+      }
 
 
   ngOnInit() {

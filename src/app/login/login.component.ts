@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
@@ -21,6 +22,15 @@ export class LoginComponent implements OnInit {
     get password(){
       return this.loginForm.get('password')
     }
+    login() {
+      if (this.loginForm.invalid){
+        console.log("Fix your Errors");
+        return;
+      }
+      this.authenticationService.login(this.email.value, this.password.value);
+      
+      
+        }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],

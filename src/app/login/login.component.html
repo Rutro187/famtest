@@ -1,6 +1,6 @@
 <div class="center">
     <mat-card class="card">
-      <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
     
         <mat-card-title class="center">Please Login</mat-card-title>
     
@@ -13,7 +13,7 @@
     
         <mat-form-field>
             <mat-label>Password</mat-label>
-            <input  formControlName ="password" matInput placeholder="Password">
+            <input  formControlName ="password" matInput type ="password" placeholder="Password">
             <mat-error *ngIf="password.errors?.required && (password.dirty || password.touched)">
                 Password is required</mat-error>
         </mat-form-field>
