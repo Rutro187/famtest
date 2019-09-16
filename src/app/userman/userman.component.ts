@@ -13,11 +13,25 @@ export class UsermanComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
-  // signUp() {
-  //   this.authenticationService.SignUp(this.email, this.password);
-  //   this.email = '';
-  //   this.password = '';
-  // }
+  get email(){
+    return this.signupForm.get('email')
+  }
+
+  get password(){
+    return this.signupForm.get('password')
+  }
+  signUp() {
+    if (this.signupForm.invalid){
+      console.log("Fix your Errors");
+      return;
+    }
+    this.authenticationService.SignUp(this.email.value, this.password.value);
+    
+    
+    // this.authenticationService.SignUp(this.email, this.password);
+    // this.email = '';
+    // this.password = '';
+  }
 
 
   ngOnInit() {
