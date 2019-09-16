@@ -1,1 +1,26 @@
 <p>userman works!</p>
+<div class="center">
+    <mat-card class="card">
+      <form [formGroup]="signupForm">
+    
+        <mat-card-title class="center">Register New User</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input  formControlName ="email" matInput placeholder="E-mail">
+            <mat-error *ngIf="email.errors?.required && (email.dirty || email.touched)">
+                E-mail is required</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input  formControlName ="password" matInput placeholder="Password">
+            <mat-error *ngIf="password.errors?.required && (password.dirty || password.touched)">
+                Password is required</mat-error>
+        </mat-form-field>
+        <div class="buttondiv">
+            <button type="submit" class="buttoncenter" color="accent"> Register </button>
+          </div>
+      </form>
+    </mat-card>
+</div>
