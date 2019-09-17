@@ -23,7 +23,11 @@
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
     "angularfire2": "^5.2.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
     "firebase": "^6.6.1",
+    "firebase-admin": "^8.5.0",
     "firebaseui": "^4.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
@@ -49,5 +53,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rutro187/famtest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rutro187/famtest/issues"
+  },
+  "homepage": "https://github.com/Rutro187/famtest#readme"
 }

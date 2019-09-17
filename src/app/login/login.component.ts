@@ -15,27 +15,27 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
-    get email(){
-      return this.loginForm.get('email')
+    get email() {
+      return this.loginForm.get('email');
     }
 
-    get password(){
-      return this.loginForm.get('password')
+    get password() {
+      return this.loginForm.get('password');
     }
     login() {
-      if (this.loginForm.invalid){
-        console.log("Fix your Errors");
+      if (this.loginForm.invalid) {
+        console.log('Fix your Errors');
         return;
       }
       this.authenticationService.login(this.email.value, this.password.value);
-      
-      
+
+
         }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['',  Validators.required],
-    })
+    });
   }
 
 }

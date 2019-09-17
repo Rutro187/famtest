@@ -14,21 +14,21 @@ export class UsermanComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
-  get email(){
-    return this.signupForm.get('email')
+  get email() {
+    return this.signupForm.get('email');
   }
 
-  get password(){
-    return this.signupForm.get('password')
+  get password() {
+    return this.signupForm.get('password');
   }
   signUp() {
-    if (this.signupForm.invalid){
-      console.log("Fix your Errors");
+    if (this.signupForm.invalid) {
+      console.log('Fix your Errors');
       return;
     }
     this.authenticationService.signUp(this.email.value, this.password.value);
-    
-    
+
+
       }
 
 
@@ -36,7 +36,7 @@ export class UsermanComponent implements OnInit {
     this.signupForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['',  Validators.required],
-    })
+    });
   }
 
 }
