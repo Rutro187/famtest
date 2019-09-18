@@ -51,3 +51,58 @@
   </form>
 </mat-card>
 </div>
+
+<div class="center">
+    <mat-card class="card">
+      <form [formGroup]="familyAddForm">
+    
+        <mat-card-title class="center">Family Management</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label>Family ID</mat-label>
+            <input  formControlName ="familyid" matInput placeholder="Family ID">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Child First Name</mat-label>
+            <input  formControlName ="CFN" matInput placeholder="Child First Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Family Name</mat-label>
+            <input  formControlName ="familyName" matInput placeholder="Family Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Child Last Name</mat-label>
+            <input  formControlName ="CLN" matInput placeholder="Child Last Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input  formControlName ="firstName" matInput placeholder="First Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>LCC Staff</mat-label>
+            <input  formControlName ="lccStaff" matInput placeholder="LCC Staff">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input  formControlName ="lastName" matInput placeholder="Last Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Account</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let status of statuses" [value]="status.value">
+                  {{status.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+      </form>
+    </mat-card>
+    </div>
+    
