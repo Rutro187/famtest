@@ -47,6 +47,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { UsermanComponent } from './userman/userman.component';
+import { FamilycrudComponent } from './familycrud/familycrud.component';
 
 
 
@@ -57,7 +58,8 @@ import { UsermanComponent } from './userman/userman.component';
     FamilyComponent,
     StaffComponent,
     LoginComponent,
-    UsermanComponent
+    UsermanComponent,
+    FamilycrudComponent
   ],
   imports: [
     BrowserModule,

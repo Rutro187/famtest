@@ -1,0 +1,194 @@
+<div class="center">
+  <mat-card class="card">
+    <form [formGroup]="familyAddForm">
+
+      <mat-card-title class="center">Add Family</mat-card-title>
+
+      <mat-form-field>
+          <mat-label>Family ID</mat-label>
+          <input  formControlName ="familyid" matInput placeholder="Family ID">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>DOB</mat-label>
+        <input  formControlName ="DOB" matInput placeholder= "DOB">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Family Name</mat-label>
+      <input  formControlName ="familyName" matInput placeholder="Family Name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Marital</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let marital of maritals" [value]="marital.value">
+          {{marital.viewValue}}
+      </mat-option>
+    </mat-select>
+
+    <mat-form-field>
+      <mat-label>Other Marital</mat-label>
+      <input  formControlName ="otherMartial" matInput placeholder="Other Marital">
+  </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input  formControlName ="firstName" matInput placeholder="First Name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input  formControlName ="lastName" matInput placeholder="Last Name">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Race</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let race of races" [value]="race.value">
+        {{race.viewValue}}
+    </mat-option>
+  </mat-select>
+
+  <mat-form-field>
+    <mat-label>Sex</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let sex of sexes" [value]="sex.value">
+          {{sex.viewValue}}
+      </mat-option>
+    </mat-select>
+
+    <mat-form-field>
+      <mat-label>Other Race</mat-label>
+      <input  formControlName ="otherRace" matInput placeholder="Other Race">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Address Line 1</mat-label>
+    <input  formControlName ="familyName" matInput placeholder="Family Name">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Years in US</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let yearsinus of yearsinuss" [value]="yearsinus.value">
+        {{yearsinus.viewValue}}
+    </mat-option>
+  </mat-select>
+
+<mat-form-field>
+  <mat-label>Address Line 2</mat-label>
+  <input  formControlName ="familyName" matInput placeholder="Family Name">
+</mat-form-field>
+
+  </mat-form-field>
+     <mat-form-field>
+          <mat-label>Number of Years</mat-label>
+          <input  formControlName ="noy" matInput placeholder="Number of Years">
+      </mat-form-field>
+
+
+      <mat-form-field>
+          <mat-label>City</mat-label>
+          <input  formControlName ="city" matInput placeholder="City">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Highest Grade</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let highestgrade of highestgrades" [value]="highestgrade.value">
+              {{highestgrade.viewValue}}
+          </mat-option>
+        </mat-select>
+
+        <mat-form-field>
+          <mat-label>State</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let state of states" [value]="state.value">
+                {{state.viewValue}}
+            </mat-option>
+          </mat-select>
+
+
+
+      <mat-form-field>
+          <mat-label>ZIP</mat-label>
+          <input  formControlName ="zip" matInput placeholder="Zip">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Other Grade</mat-label>
+        <input  formControlName ="otherGrade" matInput placeholder="Other Grade">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Phone 1</mat-label>
+      <input  formControlName ="phone1" matInput placeholder="Phone 1">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let type of types" [value]="type.value">
+          {{type.viewValue}}
+      </mat-option>
+    </mat-select>
+
+    <mat-form-field>
+      <mat-label>Employment</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let employment of employments" [value]="employment.value">
+            {{employment.viewValue}}
+        </mat-option>
+      </mat-select>
+
+  <mat-form-field>
+    <mat-label>Phone 2</mat-label>
+    <input  formControlName ="phone2" matInput placeholder="Phone 2">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Type</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let type of types" [value]="type.value">
+        {{type.viewValue}}
+    </mat-option>
+  </mat-select>
+
+<mat-form-field>
+  <mat-label>Other Employment</mat-label>
+  <input  formControlName ="otherEmploy" matInput placeholder="Other Employment">
+</mat-form-field>
+
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">Yes</mat-radio-button>
+  <mat-radio-button value="2">No</mat-radio-button>
+</mat-radio-group>
+
+      <mat-form-field>
+          <mat-label>Relation</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let relation of relations" [value]="relation.value">
+                {{relation.viewValue}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email </mat-label>
+        <input  formControlName ="email" matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email #2</mat-label>
+      <input  formControlName ="email2" matInput placeholder="Email2">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Other Relation</mat-label>
+    <input  formControlName ="otherRelation" matInput placeholder="Other Relation">
+</mat-form-field>
+
+    </form>
+  </mat-card>
+  </div>
