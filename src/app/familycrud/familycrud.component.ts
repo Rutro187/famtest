@@ -4,11 +4,13 @@ import { Router } from '@angular/router';
 import {FamilyService} from '../family.service';
 import {races} from '../Models/Interfaces/Race';
 import {sexes} from '../Models/Interfaces/Sex';
-import {maritals} from '../Models/Interfaces/Marital' 
+import {maritals} from '../Models/Interfaces/Marital'
 import {yearsinUSes} from  '../Models/Interfaces/YearsinUS'
 import {highestgrades} from '../Models/Interfaces/HighestGrade'
 import {usStates} from '../Models/Interfaces/State';
-
+import {types} from '../Models/Interfaces/Type';
+import {employments} from '../Models/Interfaces/Employment';
+import {relations} from '../Models/Interfaces/Relation'
 
 
 
@@ -25,7 +27,9 @@ export class FamilycrudComponent implements OnInit {
   yearsinUSesOpts = yearsinUSes;
   highestgradesOpts = highestgrades;
   statesOpts = usStates;
-
+  typeOpts = types;
+  employmentOpts = employments;
+  relationOpts = relations;
   constructor(private formBuilder: FormBuilder, private familyService: FamilyService) { }
 
 

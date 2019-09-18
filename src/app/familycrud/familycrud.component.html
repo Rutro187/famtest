@@ -22,7 +22,7 @@
       <mat-form-field>
         <mat-label>Marital</mat-label>
         <mat-select formControlName="marital">
-          <mat-option *ngFor="let marital of maritalsOpt" [value]="marital.value">
+          <mat-option *ngFor="let marital of maritalOpts" [value]="marital.value">
             {{marital.viewValue}}
           </mat-option>
         </mat-select>
@@ -74,7 +74,7 @@
         <mat-form-field>
           <mat-label>Years in US</mat-label>
           <mat-select formControlName="yis">
-            <mat-option *ngFor="let yearsinus of yearsinussOpts" [value]="yearsinus.value">
+            <mat-option *ngFor="let yearsinus of yearsinUSesOpts" [value]="yearsinus.value">
               {{yearsinus.viewValue}}
             </mat-option>
           </mat-select>
@@ -134,7 +134,7 @@
         <mat-form-field>
           <mat-label>Type</mat-label>
           <mat-select formControlName="type1">
-            <mat-option *ngFor="let type of typesOpts" [value]="type.value">
+            <mat-option *ngFor="let type of typeOpts" [value]="type.value">
               {{type.viewValue}}
             </mat-option>
           </mat-select>
@@ -143,7 +143,7 @@
         <mat-form-field>
           <mat-label>Employment</mat-label>
           <mat-select formControlName="employment">
-            <mat-option *ngFor="let employment of employmentsOpts" [value]="employment.value">
+            <mat-option *ngFor="let employment of employmentOpts " [value]="employment.value">
               {{employment.viewValue}}
             </mat-option>
           </mat-select>
@@ -157,7 +157,7 @@
         <mat-form-field>
           <mat-label>Type</mat-label>
           <mat-select formControlName="type2">
-            <mat-option *ngFor="let type of typesOpts" [value]="type.value">
+            <mat-option *ngFor="let type of typeOpts" [value]="type.value">
               {{type.viewValue}}
             </mat-option>
           </mat-select>
@@ -168,18 +168,18 @@
           <input formControlName="otherEmploy" matInput placeholder="Other Employment">
         </mat-form-field>
         
-        
-        <mat-radio-group formControlName="canText" aria-label="Select an option">
+        <div class="formfield">
+        <mat-radio-group formControlName="canText" >
             <mat-label>Can Text </mat-label>
           <mat-radio-button value="1">Yes</mat-radio-button>
           <mat-radio-button value="2">No</mat-radio-button>
         </mat-radio-group>
-      
+      </div>
 
         <mat-form-field>
           <mat-label>Relation</mat-label>
           <mat-select formControlName="relation">
-            <mat-option *ngFor="let relation of relationsOpts" [value]="relation.value">
+            <mat-option *ngFor="let relation of relationOpts" [value]="relation.value">
               {{relation.viewValue}}
             </mat-option>
           </mat-select>
