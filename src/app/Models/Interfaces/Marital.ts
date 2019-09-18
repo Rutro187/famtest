@@ -3,7 +3,7 @@ export interface Marital {
   viewValue: string;
 }
 
-export const martials: Marital[] = [
+export const maritals: Marital[] = [
   {value: '0', viewValue: 'Married'},
   {value: '1', viewValue: 'Not Married'},
   {value: '2', viewValue: 'Divorced '},

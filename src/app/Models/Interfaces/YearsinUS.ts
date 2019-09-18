@@ -3,7 +3,7 @@ export interface YearsinUS {
   viewValue: string;
 }
 
-export const YearsinUSes: YearsinUS [] = [
+export const yearsinUSes: YearsinUS [] = [
   {value: '0', viewValue: 'Entire Life'},
   {value: '1', viewValue: 'Prefer Not to Say'},
   {value: '2', viewValue: 'Other'},

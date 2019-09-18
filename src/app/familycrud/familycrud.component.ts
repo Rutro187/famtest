@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {FamilyService} from '../family.service';
+import {races} from '../Models/Interfaces/Race';
+import {sexes} from '../Models/Interfaces/Sex';
+import {maritals} from '../Models/Interfaces/Marital' 
+import {yearsinUSes} from  '../Models/Interfaces/YearsinUS'
+import {highestgrades} from '../Models/Interfaces/HighestGrade'
+import {usStates} from '../Models/Interfaces/State';
+
 
 
 
@@ -12,6 +19,13 @@ import {FamilyService} from '../family.service';
 })
 export class FamilycrudComponent implements OnInit {
   familyAddForm: FormGroup;
+  raceOpts = races;
+  sexOpts = sexes;
+  maritalOpts = maritals;
+  yearsinUSesOpts = yearsinUSes;
+  highestgradesOpts = highestgrades;
+  statesOpts = usStates;
+
   constructor(private formBuilder: FormBuilder, private familyService: FamilyService) { }
 
 
@@ -105,15 +119,45 @@ export class FamilycrudComponent implements OnInit {
     return this.familyAddForm.get('otherRelation');
   }
 
+  get canText() {
+    return this.familyAddForm.get('canText');
+  }
+
   ngOnInit() {
     this.familyAddForm = this.formBuilder.group({
       familyid: [''],
-      CFN: [''],
-      familyName: [''],
-      CLN: [''],
-      firstName: [''],
-      lccStaff: [''],
-      lastName: [''],
+      DOB: [''],
+      familyName: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      marital: [''],
+      otherMarital: [''],
+      race: [''],
+      sex:[''],
+      otherRace:[''],
+      address1:[''],
+      yis:[''],
+      address2:[''],
+      noy:[''],
+      city:[''],
+      hg:[''],
+      zip:[''],
+      otherGrade:[''],
+      phone1:[''],
+      type1:[''],
+      employment:[''],
+      phone2:[''],
+      type2:[''],
+      otherEmploy:[''],
+      relation:[''],
+      email:[''],
+      email2:[''],
+      otherRelation:[''],
+      canText:[''],
+
+
+
+
 
 
     });
