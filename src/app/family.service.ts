@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class FamilyService {
 
   constructor(
-    private firestore: AngularFirestore
+    private afs: AngularFirestore
   ) { }
 
 
