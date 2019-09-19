@@ -3,7 +3,7 @@ export interface Sex {
   viewValue: string;
 }
 export const
-sexes: Sex[ ]= [
+sexes: Sex[ ] = [
   {value: '0', viewValue: 'Male'},
   {value: '1', viewValue: 'Female'},
 ];

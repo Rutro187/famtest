@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import {FamilyService} from '../family.service';
 import {races} from '../Models/Interfaces/Race';
 import {sexes} from '../Models/Interfaces/Sex';
-import {maritals} from '../Models/Interfaces/Marital'
-import {yearsinUSes} from  '../Models/Interfaces/YearsinUS'
-import {highestgrades} from '../Models/Interfaces/HighestGrade'
+import {maritals} from '../Models/Interfaces/Marital';
+import {yearsinUSes} from '../Models/Interfaces/YearsinUS';
+import {highestgrades} from '../Models/Interfaces/HighestGrade';
 import {usStates} from '../Models/Interfaces/State';
 import {types} from '../Models/Interfaces/Type';
 import {employments} from '../Models/Interfaces/Employment';
-import {relations} from '../Models/Interfaces/Relation'
+import {relations} from '../Models/Interfaces/Relation';
+import {texts} from '../Models/Interfaces/text';
 
 
 
@@ -30,6 +31,7 @@ export class FamilycrudComponent implements OnInit {
   typeOpts = types;
   employmentOpts = employments;
   relationOpts = relations;
+  textOpts = texts;
   constructor(private formBuilder: FormBuilder, private familyService: FamilyService) { }
 
 
@@ -89,6 +91,9 @@ export class FamilycrudComponent implements OnInit {
   get zip() {
     return this.familyAddForm.get('zip');
   }
+  get state() {
+    return this.familyAddForm.get('state');
+  }
   get otherGrade() {
     return this.familyAddForm.get('otherGrade');
   }
@@ -137,27 +142,28 @@ export class FamilycrudComponent implements OnInit {
       marital: [''],
       otherMarital: [''],
       race: [''],
-      sex:[''],
-      otherRace:[''],
-      address1:[''],
-      yis:[''],
-      address2:[''],
-      noy:[''],
-      city:[''],
-      hg:[''],
-      zip:[''],
-      otherGrade:[''],
-      phone1:[''],
-      type1:[''],
-      employment:[''],
-      phone2:[''],
-      type2:[''],
-      otherEmploy:[''],
-      relation:[''],
-      email:[''],
-      email2:[''],
-      otherRelation:[''],
-      canText:[''],
+      sex: [''],
+      otherRace: [''],
+      address1: [''],
+      yis: [''],
+      address2: [''],
+      noy: [''],
+      city: [''],
+      hg: [''],
+      zip: [''],
+      otherGrade: [''],
+      phone1: [''],
+      type1: [''],
+      employment: [''],
+      phone2: [''],
+      type2: [''],
+      otherEmploy: [''],
+      relation: [''],
+      email: [''],
+      email2: [''],
+      otherRelation: [''],
+      canText: [''],
+      state: ['NE - Nebraska'],
 
 
 

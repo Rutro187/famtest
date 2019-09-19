@@ -13,5 +13,5 @@ export const highestgrades: HighestGrade[] = [
   {value: '7', viewValue: 'Masters Degree'},
   {value: '8', viewValue: 'Doctoral Degree'},
   {value: '9', viewValue: 'Other'},
- 
+
 ];

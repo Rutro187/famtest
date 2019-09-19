@@ -4,22 +4,22 @@
 
       <mat-card-title class="center">Add Family</mat-card-title>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Family ID</mat-label>
         <input formControlName="familyid" matInput placeholder="Family ID">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>DOB</mat-label>
         <input formControlName="DOB" matInput placeholder="DOB">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Family Name</mat-label>
         <input formControlName="familyName" matInput placeholder="Family Name">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Marital</mat-label>
         <mat-select formControlName="marital">
           <mat-option *ngFor="let marital of maritalOpts" [value]="marital.value">
@@ -28,22 +28,22 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Other Marital</mat-label>
         <input formControlName="otherMarital" matInput placeholder="Other Marital">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>First Name</mat-label>
         <input formControlName="firstName" matInput placeholder="First Name">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Last Name</mat-label>
         <input formControlName="lastName" matInput placeholder="Last Name">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Race</mat-label>
         <mat-select formControlName="race">
           <mat-option *ngFor="let race of raceOpts" [value]="race.value">
@@ -52,7 +52,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class ='formfield'>
         <mat-label>Sex</mat-label>
         <mat-select formControlName="sex">
           <mat-option *ngFor="let sex of sexOpts" [value]="sex.value">
@@ -61,17 +61,17 @@
         </mat-select>
       </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Other Race</mat-label>
           <input formControlName="otherRace" matInput placeholder="Other Race">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Address Line 1</mat-label>
           <input formControlName="address1" matInput placeholder="Family Name">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Years in US</mat-label>
           <mat-select formControlName="yis">
             <mat-option *ngFor="let yearsinus of yearsinUSesOpts" [value]="yearsinus.value">
@@ -80,24 +80,24 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Address Line 2</mat-label>
           <input formControlName="address2" matInput placeholder="Family Name">
         </mat-form-field>
 
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Number of Years</mat-label>
           <input formControlName="noy" matInput placeholder="Number of Years">
         </mat-form-field>
 
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>City</mat-label>
           <input formControlName="city" matInput placeholder="City">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Highest Grade</mat-label>
           <mat-select formControlName="hg">
             <mat-option *ngFor="let highestgrade of highestgradesOpts" [value]="highestgrade.value">
@@ -106,32 +106,32 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='halfformfield'>
           <mat-label>State</mat-label>
           <mat-select formControlName="state">
-            <mat-option *ngFor="let state of statesOpts" [value]="state.value">
+            <mat-option *ngFor="let state of statesOpts" [value]="state.viewValue">
               {{state.viewValue}}
             </mat-option>
           </mat-select>
         </mat-form-field>
 
 
-        <mat-form-field>
+        <mat-form-field class='halfformfield'>
           <mat-label>ZIP</mat-label>
           <input formControlName="zip" matInput placeholder="Zip">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Other Grade</mat-label>
           <input formControlName="otherGrade" matInput placeholder="Other Grade">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='halfformfield'>
           <mat-label>Phone 1</mat-label>
           <input formControlName="phone1" matInput placeholder="Phone 1">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='halfformfield'>
           <mat-label>Type</mat-label>
           <mat-select formControlName="type1">
             <mat-option *ngFor="let type of typeOpts" [value]="type.value">
@@ -140,7 +140,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class ='formfield'>
           <mat-label>Employment</mat-label>
           <mat-select formControlName="employment">
             <mat-option *ngFor="let employment of employmentOpts " [value]="employment.value">
@@ -149,12 +149,12 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='halfformfield'>
           <mat-label>Phone 2</mat-label>
           <input formControlName="phone2" matInput placeholder="Phone 2">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='halfformfield'>
           <mat-label>Type</mat-label>
           <mat-select formControlName="type2">
             <mat-option *ngFor="let type of typeOpts" [value]="type.value">
@@ -163,20 +163,21 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='formfield'>
           <mat-label>Other Employment</mat-label>
           <input formControlName="otherEmploy" matInput placeholder="Other Employment">
         </mat-form-field>
-        
-        <div class="formfield">
-        <mat-radio-group formControlName="canText" >
-            <mat-label>Can Text </mat-label>
-          <mat-radio-button value="1">Yes</mat-radio-button>
-          <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-      </div>
 
-        <mat-form-field>
+        <mat-form-field class='formfield'>
+         <mat-label>Can Text </mat-label>
+         <mat-select formControlName="canText" >
+         <mat-option *ngFor="let text of textOpts" [value]="text.value">
+            {{text.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+        <mat-form-field class='formfield'>
           <mat-label>Relation</mat-label>
           <mat-select formControlName="relation">
             <mat-option *ngFor="let relation of relationOpts" [value]="relation.value">
@@ -185,17 +186,17 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='formfield'>
           <mat-label>Email </mat-label>
           <input formControlName="email" matInput placeholder="Email">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='formfield'>
           <mat-label>Email #2</mat-label>
           <input formControlName="email2" matInput placeholder="Email2">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class='formfield'>
           <mat-label>Other Relation</mat-label>
           <input formControlName="otherRelation" matInput placeholder="Other Relation">
         </mat-form-field>
