@@ -30,6 +30,7 @@
     "firebase": "^6.6.1",
     "firebase-admin": "^8.5.0",
     "firebaseui": "^4.2.0",
+    "material-design-icons": "^3.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

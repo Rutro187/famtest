@@ -34,7 +34,9 @@ export class FamilycrudComponent implements OnInit {
   textOpts = texts;
   constructor(private formBuilder: FormBuilder, private familyService: FamilyService) { }
 
-
+  addFamily(){
+this.familyService.addFamily()
+  }
 
 
 

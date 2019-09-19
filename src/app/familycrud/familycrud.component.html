@@ -1,6 +1,6 @@
 <div class="center">
   <mat-card class="card">
-    <form [formGroup]="familyAddForm">
+    <form [formGroup]="familyAddForm" (ngSubmit)="addFamily()">
 
       <mat-card-title class="center">Add Family</mat-card-title>
 
@@ -200,7 +200,11 @@
           <mat-label>Other Relation</mat-label>
           <input formControlName="otherRelation" matInput placeholder="Other Relation">
         </mat-form-field>
-
+<div>
+ <button mat-button type= submit> <mat-icon>add</mat-icon>
+Add Family
+</button>
+</div>
     </form>
   </mat-card>
 </div>
