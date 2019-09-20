@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment.prod';
+import { AngularFirestore} from '@angular/fire/firestore';
 
 /* Auth service */
 import { AuthenticationService } from './authentication.service';
@@ -103,7 +104,7 @@ import { FamilysearchComponent } from './familysearch/familysearch.component';
     ReactiveFormsModule ,
     FormsModule,
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
