@@ -1,17 +1,18 @@
 export interface Family {
-
+      id?: string;
+      familyID: number;
       DOB: Date;
       familyName: string;
       firstName: string;
       lastName: string;
-      marital: string,
-      otherMarital: string,
-      race: string,
-      sex: string,
-      otherRace: string,
-      address1: string,
-      yis: number,
-      address2: string,
+      marital: string;
+      otherMarital: string;
+      race: string;
+      sex: string;
+      otherRace: string;
+      address1: string;
+      yis: number;
+      address2: string;
       noy: number;
       city: string;
       hg: string;
