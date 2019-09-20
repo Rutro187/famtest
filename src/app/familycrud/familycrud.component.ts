@@ -12,6 +12,8 @@ import {types} from '../Models/Interfaces/Type';
 import {employments} from '../Models/Interfaces/Employment';
 import {relations} from '../Models/Interfaces/Relation';
 import {texts} from '../Models/Interfaces/text';
+import { Observable } from 'rxjs';
+
 
 
 
@@ -22,6 +24,7 @@ import {texts} from '../Models/Interfaces/text';
 })
 export class FamilycrudComponent implements OnInit {
   familyAddForm: FormGroup;
+  submitted = false;
   raceOpts = races;
   sexOpts = sexes;
   maritalOpts = maritals;
@@ -34,9 +37,40 @@ export class FamilycrudComponent implements OnInit {
   textOpts = texts;
   constructor(private formBuilder: FormBuilder, private familyService: FamilyService) { }
 
-//   addFamily() {
-// this.familyService.addFamily();
-//   }
+  addFamily() {
+    const data = {
+      DOB: this.DOB,
+      familyName: this.familyName,
+      marital: this.marital,
+      otherMarital: this.otherMarital,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      race: this.race,
+      sex: this.sex,
+      otherRace: this.otherRace,
+      address1: this.address1,
+      yis: this.yis,
+      address2: this.address2,
+      noy: this.noy,
+      city: this.city,
+      hg: this.hg,
+      state: this.state,
+      zip: this.zip,
+      otherGrade: this.otherGrade,
+      phone1: this.phone1,
+      type1: this.type1,
+      employment: this.employment,
+      phone2: this.phone2,
+      type2: this.type2,
+      otherEmploy: this.otherEmploy,
+      canText: this.canText,
+      relation: this.relation,
+      email: this.email,
+      email2: this.email2,
+      otherRelation: this.otherRelation,
+    };
+    this.familyService.add(data);
+  }
 
 
 

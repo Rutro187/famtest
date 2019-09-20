@@ -27,7 +27,7 @@ allFamily() {
   }));
 }
 
-addFamily(data: Family) {
+add(data: Family) {
   this.familyCollection.add(data);
   }
 

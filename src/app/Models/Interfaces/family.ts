@@ -1,6 +1,6 @@
 export interface Family {
       id?: string;
-      familyID: number;
+      // familyID: number;
       DOB: Date;
       familyName: string;
       firstName: string;
